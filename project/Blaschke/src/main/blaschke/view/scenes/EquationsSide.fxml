@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox fx:id="vbEquationsSide" stylesheets="@../style/dark/EquationsSideStyle.css"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.blaschke.controllers.EquationsSideController">
+
+    <fx:define>
+        <ImageView fx:id="imgOff1">
+            <Image url="@../../../../resources/icons/sideicons/off.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgOff2">
+            <Image url="@../../../../resources/icons/sideicons/off.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgOff3">
+            <Image url="@../../../../resources/icons/sideicons/off.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgShow">
+            <Image url="@../../../../resources/icons/sideicons/show.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgDelete">
+            <Image url="@../../../../resources/icons/deleteblack.png" requestedHeight="24" requestedWidth="24"/>
+        </ImageView>
+    </fx:define>
+
+    <children>
+        <HBox styleClass="hbConstant">
+            <HBox>
+                <Label text="Re(c)"/>
+                <TextField fx:id="tfCX" promptText="Enter decimal numbers" text="1"/>
+            </HBox>
+            <HBox>
+                <Label text="Im(c)"/>
+                <TextField fx:id="tfCY" promptText="Enter decimal numbers" text="0"/>
+            </HBox>
+        </HBox>
+        <HBox styleClass="hbBlaschkeProduct">
+            <Label text="Blaschke Product P(z)"/>
+            <ToggleButton fx:id="tbProductHide" graphic="$imgShow" onAction="#toggleProductVisibility" />
+            <Button id="btnClear" onAction="#clear" text="Clear" graphic="$imgDelete"/>
+        </HBox>
+        <TreeView fx:id="tvBlaschke" showRoot="false" root="$tiBlaschkeRoot">
+            <TreeItem fx:id="tiBlaschkeRoot" expanded="true"/>
+        </TreeView>
+    </children>
+
+</VBox>

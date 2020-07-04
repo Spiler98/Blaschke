@@ -1,0 +1,152 @@
+/* ---- H/V Boxes ----*/
+#vbShapesSide {
+    -fx-spacing: 10;
+    -fx-padding: 10 10 0 7;
+}
+
+HBox {
+    -fx-alignment: center-left;
+}
+
+HBox .label {
+    -fx-background-color: #a7a6a6;
+    -fx-background-radius: 4 0 0 4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-pref-height: 27;
+    -fx-padding: 0 5 0 5;
+}
+
+HBox .text-field {
+    -fx-background-color: #ececec;
+    -fx-background-radius: 0 4 4 0;
+    -fx-border-color: #cdcdcd;
+    -fx-border-radius: 0 4 4 0;
+}
+
+.hbMain {
+    -fx-spacing: 5;
+}
+
+.hbMain .label {
+    -fx-background-color: #7b7b7b;
+}
+
+/* ---- ComboBox ---- */
+.combo-box {
+    -fx-background-color: #ececec;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 4 4 0;
+    -fx-pref-height: 27;
+}
+
+.combo-box:hover {
+    -fx-background-color: white;
+}
+
+.combo-box:pressed .arrow-button, .combo-box:pressed .list-cell {
+    -fx-background-color: #56a9e0;
+}
+
+.combo-box .combo-box-popup .list-view {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.combo-box .combo-box-popup .list-cell:selected,
+.combo-box .combo-box-popup .list-cell:hover {
+    -fx-background-color: #56a9e0;
+
+}
+
+/* ---- Buttons ---- */
+.button .toggle-button {
+    -fx-background-insets: 0;
+    -fx-background-radius: 4;
+    -fx-pref-height: 30;
+    -fx-min-width: 30;
+}
+
+.button:hover, .toggle-button:hover {
+    -fx-effect: innershadow(gaussian, white, 1, 1, 0, 0);
+}
+
+.button:pressed, .toggle-button:pressed, .toggle-button:selected {
+    -fx-effect: innershadow(gaussian, #868686, 10, 0, 0, 3);
+}
+
+#btnAddShape {
+    -fx-background-color: #56a9e0;
+}
+
+#btnClearShapes {
+    -fx-background-color: #e05656;
+}
+
+/* ---- Tree ---- */
+.tree-view {
+    -fx-background-color: #5c5c5c;
+    -fx-border-color: #ececec;
+}
+
+.tree-view .arrow {
+    -fx-background-color: #ececec;
+}
+
+.tree-view .tree-cell {
+    -fx-background-color: #5c5c5c;
+}
+
+.tree-view .tree-cell .label {
+    -fx-pref-width: 50;
+}
+
+.tree-view .tree-cell .text-field {
+    -fx-pref-width: 150;
+}
+
+.tree-view .tree-cell:selected {
+    -fx-background-color: #56a9e0;
+}
+
+.tree-view .tree-cell:selected .separator {
+    -fx-background-color: #d9d9d9;
+}
+
+.lShape {
+    -fx-background-color: #56a9e0;
+    -fx-background-radius: 4 4 4 4;
+    -fx-pref-width: 70;
+}
+
+/* ---- ColorPicker ---- */
+.color-picker {
+    -fx-background-color: #ececec;
+    -fx-background-radius: 0 4 4 0;
+    -fx-background-insets: 0;
+    -fx-pref-height: 27;
+    -fx-pref-width: 100;
+}
+
+.color-picker .label {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-text-fill: black;
+    -fx-font-weight: normal;
+}
+
+.color-picker:hover {
+    -fx-background-color: white;
+}
+
+.color-picker:pressed, .color-picker:selected {
+    -fx-background-color: white;
+    -fx-effect: innershadow(gaussian, #adadad, 10, 0, 0, 3);
+}
+
+.color-picker .separator {
+    -fx-background-color: white;
+    -fx-padding: 5 0 5 0;
+}
+

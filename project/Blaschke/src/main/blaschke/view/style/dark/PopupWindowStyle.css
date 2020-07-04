@@ -1,0 +1,51 @@
+VBox {
+    -fx-background-color: #3d3d3d;
+    -fx-border-color: #3d3d3d;
+    -fx-spacing: 10;
+    -fx-padding: 10 10 10 10;
+    -fx-alignment: center;
+}
+
+HBox {
+    -fx-alignment: center;
+}
+
+.label {
+    -fx-text-fill: #a7a6a6;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-pref-height: 27;
+    -fx-padding: 0 5 0 5;
+}
+
+.radio-button {
+    -fx-text-fill: #a7a6a6;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-pref-height: 27;
+    -fx-padding: 0 5 0 5;
+}
+
+/* ---- Button ---- */
+.button {
+    -fx-background-insets: 0;
+    -fx-background-radius: 4;
+    -fx-pref-height: 30;
+    -fx-min-width: 30;
+}
+
+.button:hover {
+    -fx-effect: innershadow(gaussian, white, 1, 1, 0, 0);
+}
+
+.button:pressed {
+    -fx-effect: innershadow(gaussian, #adadad, 10, 0, 0, 3);
+}
+
+#btnSave {
+    -fx-background-color: #56a9e0;
+}
+
+#btnDiscard {
+    -fx-background-color: #e05656;
+}

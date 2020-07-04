@@ -1,0 +1,28 @@
+#borderPane {
+    -fx-background-color: #56a9e0;
+    -fx-border-color: #56a9e0 #56a9e0 transparent #56a9e0;
+}
+
+.menu-bar .container .menu-button:showing {
+    -fx-background-color: #568de0;
+}
+
+.menu-bar .container .menu-button:hover {
+    -fx-background-color: #56a9e0;
+}
+
+.menu-item:focused {
+    -fx-background-color: #56a9e0;
+}
+
+.context-menu {
+    -fx-border-color: #568de0;
+}
+
+.tab-pane .tab-header-background {
+    -fx-border-color: transparent transparent #56a9e0 transparent;
+}
+
+.tab-pane .tab-header-area .tab:hover {
+    -fx-background-color: #56a9e0;
+}

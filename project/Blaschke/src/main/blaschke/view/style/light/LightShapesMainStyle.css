@@ -1,0 +1,18 @@
+/* ---- H/V Boxes ---- */
+#vbShapesMain {
+    -fx-background-color: #e5e5e5;
+}
+
+/* ---- LineChart ---- */
+.axis {
+    -fx-tick-label-fill: #5c5c5c;
+}
+
+.chart-legend {
+    -fx-background-color: #ececec;
+    -fx-border-color: #5c5c5c;
+}
+
+.chart-plot-background {
+    -fx-background-color: #ececec;
+}

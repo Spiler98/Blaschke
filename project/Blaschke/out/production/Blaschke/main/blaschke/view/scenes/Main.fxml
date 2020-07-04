@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ScrollPane?>
+
+<BorderPane fx:id="borderPane" stylesheets="@../style/dark/MainStyle.css"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="main.blaschke.controllers.MainController">
+
+    <fx:define>
+        <!--  Menu icons -->
+        <ImageView fx:id="imgFile">
+            <Image url="@../../../../resources/icons/menuicons/file.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgEdit">
+            <Image url="@../../../../resources/icons/menuicons/edit.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgSettings">
+            <Image url="@../../../../resources/icons/menuicons/settings.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgInfo">
+            <Image url="@../../../../resources/icons/menuicons/info.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <!-- MenuItem icons -->
+        <ImageView fx:id="imgNew">
+            <Image url="@../../../../resources/icons/menuicons/new.png" requestedHeight="24" requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgOpen">
+            <Image url="@../../../../resources/icons/menuicons/open.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgSave">
+            <Image url="@../../../../resources/icons/menuicons/save.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgExport">
+            <Image url="@../../../../resources/icons/menuicons/export.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgExit">
+            <Image url="@../../../../resources/icons/menuicons/exit.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgUndo">
+            <Image url="@../../../../resources/icons/menuicons/undo.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgRedo">
+            <Image url="@../../../../resources/icons/menuicons/redo.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgCut">
+            <Image url="@../../../../resources/icons/menuicons/cut.png" requestedHeight="24" requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgCopy">
+            <Image url="@../../../../resources/icons/menuicons/copy.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgPaste">
+            <Image url="@../../../../resources/icons/menuicons/paste.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgDelete">
+            <Image url="@../../../../resources/icons/deletewhite.png" requestedHeight="24" requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgOptions">
+            <Image url="@../../../../resources/icons/menuicons/options.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgHelp">
+            <Image url="@../../../../resources/icons/menuicons/help.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgAbout">
+            <Image url="@../../../../resources/icons/menuicons/about.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <!-- Tab icons -->
+        <ImageView fx:id="imgShapes">
+            <Image url="@../../../../resources/icons/tabicons/shapes.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgEquations">
+            <Image url="@../../../../resources/icons/tabicons/equations.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+    </fx:define>
+    <top>
+        <MenuBar BorderPane.alignment="TOP_CENTER">
+            <Menu text="_File" graphic="$imgFile">
+                <MenuItem text="_New" graphic="$imgNew" onAction="#newCalculation" accelerator="Ctrl+N"/>
+                <MenuItem text="_Open" graphic="$imgOpen" onAction="#openCalculation" accelerator="Ctrl+O"/>
+                <MenuItem text="_Save" graphic="$imgSave" onAction="#saveCalculation" accelerator="Ctrl+S"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Export image" graphic="$imgExport" onAction="#exportCalculationAsImage"
+                          accelerator="Ctrl+E"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="E_xit" graphic="$imgExit" onAction="#close"/>
+            </Menu>
+            <Menu text="_Edit" graphic="$imgEdit">
+                <MenuItem text="_Undo" graphic="$imgUndo" onAction="#undo" accelerator="Ctrl+Z"/>
+                <MenuItem text="_Redo" graphic="$imgRedo" onAction="#redo" accelerator="Ctrl+Y"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Cu_t" graphic="$imgCut" onAction="#cut" accelerator="Ctrl+X"/>
+                <MenuItem text="_Copy" graphic="$imgCopy" onAction="#copy" accelerator="Ctrl+C"/>
+                <MenuItem text="_Paste" graphic="$imgPaste" onAction="#paste" accelerator="Ctrl+V"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="_Delete" graphic="$imgDelete" onAction="#delete" accelerator="Delete"/>
+            </Menu>
+            <Menu text="_Settings" graphic="$imgSettings">
+                <MenuItem text="_Options" graphic="$imgOptions" onAction="#options"/>
+            </Menu>
+            <Menu text="_Info" graphic="$imgInfo">
+                <MenuItem text="_Help" graphic="$imgHelp" onAction="#openHelpPDF"/>
+                <MenuItem text="_About" graphic="$imgAbout" onAction="#about"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <Tab fx:id="tShapes" text="Shapes" graphic="$imgShapes">
+                <SplitPane dividerPositions="0.4" >
+                    <ScrollPane SplitPane.resizableWithParent="false">
+                        <fx:include source="ShapesSide.fxml" fx:id="vbShapesSide"/>
+                    </ScrollPane>
+                    <ScrollPane SplitPane.resizableWithParent="true">
+                        <fx:include source="ShapesMain.fxml" fx:id="vbShapesMain"/>
+                    </ScrollPane>
+                </SplitPane>
+            </Tab>
+            <Tab fx:id="tEquations" text="Equations" graphic="$imgEquations">
+                <SplitPane dividerPositions="0.4">
+                    <ScrollPane SplitPane.resizableWithParent="false">
+                        <fx:include source="EquationsSide.fxml" fx:id="vbEquationsSide"/>
+                    </ScrollPane>
+                    <ScrollPane SplitPane.resizableWithParent="true">
+                        <fx:include source="EquationsMain.fxml" fx:id="vbEquationsMain"/>
+                    </ScrollPane>
+                </SplitPane>
+            </Tab>
+        </TabPane>
+    </center>
+
+    <bottom>
+        <HBox>
+            <Label styleClass="planeLabel" fx:id="lMessages"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label styleClass="planeLabel" text="Z-Plane coordinates: "/>
+            <Label styleClass="planeLabel" fx:id="lMouseCoords"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

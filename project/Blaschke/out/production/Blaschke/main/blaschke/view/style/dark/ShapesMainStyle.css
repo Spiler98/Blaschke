@@ -1,0 +1,75 @@
+/* ---- H/V Boxes ---- */
+#vbShapesMain {
+    -fx-background-color: #3d3d3d;
+    -fx-spacing: 10;
+}
+
+#hbShapes {
+    -fx-spacing: 10;
+    -fx-padding: 0 10 0 10;
+}
+
+#hbPlaneLabels {
+    -fx-padding: 0 10 0 10;
+}
+
+#hbPlaneLabels .label {
+    -fx-background-color: #56a9e0;
+    -fx-background-radius: 0 0 4 4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-pref-height: 27;
+    -fx-padding: 0 5 0 5;
+}
+
+
+/* ---- LineChart ---- */
+.axis {
+    -fx-tick-label-fill: white;
+    -fx-tick-label-font: 12 bold;
+}
+
+.chart-content {
+    -fx-padding: 30;
+}
+
+.chart-title {
+    -fx-background-color: #56a9e0;
+    -fx-background-radius: 4 4 4 4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-pref-width: 27;
+}
+
+.chart-legend {
+    -fx-background-color: #c9c9c9;
+}
+
+.chart-plot-background {
+    -fx-background-color: #c9c9c9;
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines
+{
+    -fx-stroke: #505050;
+}
+
+/* ---- Function color ---- */
+.chart-series-line.default-color0 {
+    -fx-stroke: #e05656;
+}
+
+.chart-series-line.default-color1 {
+    -fx-stroke: #56a9e0;
+}
+
+.chart-line-symbol.default-color0 {
+    -fx-background-color: #e05656, white;
+}
+
+.chart-line-symbol.default-color1 {
+    -fx-background-color: #56a9e0, white;
+}

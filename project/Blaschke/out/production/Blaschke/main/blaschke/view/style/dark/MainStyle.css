@@ -1,0 +1,171 @@
+.root {
+    -fx-background-color: #56a9e0;
+    -fx-border-color: #56a9e0 #56a9e0 transparent #56a9e0;
+    -fx-pref-width: 1100;
+    -fx-pref-height: 950;
+}
+
+/* -------- TOP -------- */
+
+/* ---- MenuBar ---- */
+.menu-bar {
+    -fx-background-color: #3d3d3d;
+    -fx-border-color: transparent transparent #a7a6a6 transparent;
+    -fx-padding: 2 0 5 5;
+}
+
+.menu-bar .container .menu-button:showing {
+    -fx-background-color: #568de0;
+}
+.menu-bar .container .menu-button:hover {
+    -fx-background-color: #56a9e0;
+}
+
+/* ---- Menu ---- */
+.menu {
+    -fx-background-color: #5c5c5c;
+}
+
+.menu .label {
+    -fx-text-fill: white;
+}
+
+/* ---- MenuItem ---- */
+.menu-item {
+    -fx-background-color: #5c5c5c;
+    -fx-min-width: 200;
+}
+
+.menu-item:focused {
+    -fx-background-color: #56a9e0;
+}
+
+/* ---- ContextMenu ---- */
+.context-menu {
+    -fx-background-color: #5c5c5c;
+    -fx-border-color: #568de0;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.context-menu .label {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-font-weight: normal;
+}
+
+/* ---- Separator ---- */
+.separator {
+    -fx-background-color: #5c5c5c;
+    -fx-padding: 5 0 5 0;
+}
+
+
+/* -------- CENTER -------- */
+
+/* ---- Tab Pane ----*/
+
+/* -- Common -- */
+.tab-pane .tab-header-background {
+    -fx-background-color: #3d3d3d;
+    -fx-border-color: transparent transparent #56a9e0 transparent;
+    -fx-border-width: 3;
+}
+
+.tab-pane .tab-header-area .tab {
+    -fx-background-color: #3d3d3d;
+    -fx-border-color: #5c5c5c #5c5c5c #8f56e0 #5c5c5c;
+    -fx-border-width: 1 1 3 1;
+    -fx-background-radius: 5 5 0 0;
+    -fx-border-radius: 4 4 0 0;
+    -fx-padding: 3 10 5 10;
+}
+
+.tab-pane .tab-header-area .tab .tab-label {
+    -fx-text-fill: white;
+}
+
+.tab-pane .tab-header-area .tab:hover {
+    -fx-background-color: #56a9e0;
+}
+
+.tab-pane .tab-header-area .tab:selected {
+    -fx-focus-color: transparent;
+    -fx-border-color: #56a9e0 #56a9e0 #5c5c5c #56a9e0;
+    -fx-border-width: 3 3 1 3;
+}
+
+.tab-pane .tab-header-area .tab:selected .tab-label {
+    -fx-font-weight: bold;
+}
+
+/* -- Equations -- */
+.tab-pane .tab-header-area #tEquations {
+    -fx-border-color: #5c5c5c #5c5c5c #56a9e0 #5c5c5c;
+}
+
+.tab-pane .tab-header-area #tEquations:selected {
+    -fx-border-color: #8f56e0 #8f56e0 #5c5c5c #8f56e0;
+}
+
+/* ---- SplitPane ---- */
+.split-pane-divider {
+    -fx-background-color: #a7a6a6;
+    -fx-border-color: #3d3d3d;
+    -fx-pref-width: 8;
+    -fx-background-insets: 0, 1 0 1 0;
+    -fx-border-width: 1 1 0 1;
+}
+
+/* ---- ScrollPane ---- */
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: #3d3d3d;
+    -fx-min-width: 200;
+    -fx-fit-to-width: true;
+}
+
+.scroll-bar {
+    -fx-background-color: #a7a6a6;
+}
+
+.scroll-bar:vertical {
+    -fx-pref-width: 10;
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 10;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #e3e3e3;
+    -fx-background-insets: 2 0 2 0;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #e3e3e3;
+    -fx-background-insets: 0 2 0 2;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: white;
+}
+
+.scroll-bar:horizontal .thumb:pressed,
+.scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #56a9e0;
+}
+
+
+/* -------- BOTTOM -------- */
+.planeLabel {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

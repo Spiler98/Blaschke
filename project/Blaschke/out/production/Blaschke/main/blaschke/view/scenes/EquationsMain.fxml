@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.Double?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+
+<VBox fx:id="vbEquationsMain" stylesheets="@../style/dark/EquationsMainStyle.css"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.blaschke.controllers.EquationsMainController">
+
+    <fx:define>
+        <Double fx:id="planeStart" fx:value="-150"/>
+        <Double fx:id="planeEnd" fx:value="150"/>
+    </fx:define>
+
+    <children>
+        <HBox id="hbLabels">
+            <Label text="Blaschke Parameters"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Roots"/>
+        </HBox>
+        <HBox id="hbEquations">
+            <Group fx:id="complexPlane" scaleY="-1" onMouseMoved="#setMouseCoords" onMousePressed="#setPoint" onMouseDragged="#dragPoint" onMouseReleased="#setChart">
+                <Line startX="$planeStart" endX="$planeEnd"/>
+                <Circle fx:id="circle" fill="WHITE" opacity="0.5" radius="$planeEnd" stroke="BLACK"/>
+                <Line startY="$planeStart" endY="$planeEnd"/>
+            </Group>
+            <Region HBox.hgrow="ALWAYS"/>
+            <LineChart fx:id="lcSolutions" >
+                <xAxis>
+                    <NumberAxis lowerBound="-10" upperBound="10" side="BOTTOM"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis lowerBound="-1" upperBound="1" side="LEFT"/>
+                </yAxis>
+            </LineChart>
+        </HBox>
+        <LineChart fx:id="lcFunctions" title="Blaschke Functions">
+            <xAxis>
+                <NumberAxis fx:id="xAxis" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis lowerBound="-1" upperBound="1" side="LEFT"/>
+            </yAxis>
+        </LineChart>
+    </children>
+
+
+</VBox>

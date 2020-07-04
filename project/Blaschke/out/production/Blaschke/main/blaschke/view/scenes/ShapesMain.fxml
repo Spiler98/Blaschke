@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import java.lang.Double?>
+<?import javafx.scene.control.Label?>
+
+<VBox fx:id="vbShapesMain" stylesheets="@../style/dark/ShapesMainStyle.css"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.blaschke.controllers.ShapesMainController">
+
+    <fx:define>
+        <Double fx:id="planeStart" fx:value="-150"/>
+        <Double fx:id="planeEnd" fx:value="150"/>
+    </fx:define>
+
+    <children>
+        <HBox id="hbPlaneLabels">
+            <Label text="Z-Plane"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="W-Plane"/>
+        </HBox>
+        <HBox id="hbShapes" >
+            <Group fx:id="zPlane" scaleY="-1" onMouseMoved="#setMouseCoords" onMousePressed="#setStart" onMouseDragged="#setEnd">
+                <Line startX="$planeStart" endX="$planeEnd"/>
+                <Circle fx:id="zCircle" fill="WHITE" opacity="0.5" radius="$planeEnd" stroke="BLACK"/>
+                <Line startY="$planeStart" endY="$planeEnd"/>
+            </Group>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Group fx:id="wPlane" scaleY="-1" >
+                <Line startX="$planeStart" endX="$planeEnd"/>
+                <Circle fx:id="wCircle" fill="WHITE" opacity="0.5" radius="$planeEnd" stroke="BLACK"/>
+                <Line startY="$planeStart" endY="$planeEnd"/>
+            </Group>
+        </HBox>
+        <LineChart fx:id="lcFunctions" title="Blaschke Function">
+            <xAxis>
+                <NumberAxis fx:id="xAxis" side="BOTTOM"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis lowerBound="-1" upperBound="1" side="LEFT"/>
+            </yAxis>
+        </LineChart>
+    </children>
+
+</VBox>

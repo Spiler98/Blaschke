@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox fx:id="vbShapesSide" stylesheets="@../style/dark/ShapesSideStyle.css"
+      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="main.blaschke.controllers.ShapesSideController">
+
+    <fx:define>
+        <ImageView fx:id="imgAddShape">
+            <Image url="@../../../../resources/icons/sideicons/add.png" requestedHeight="24"
+                   requestedWidth="24"/>
+        </ImageView>
+        <ImageView fx:id="imgDeleteShape">
+            <Image url="@../../../../resources/icons/deleteblack.png" requestedHeight="24" requestedWidth="24"/>
+        </ImageView>
+    </fx:define>
+
+    <children>
+        <HBox styleClass="hbMain">
+            <HBox>
+                <Label text="Re(a)"/>
+                <TextField fx:id="tfBPX" promptText="Enter decimal numbers"/>
+            </HBox>
+            <HBox>
+                <Label text="Im(a)"/>
+                <TextField fx:id="tfBPY" promptText="Enter decimal numbers"/>
+            </HBox>
+        </HBox>
+        <HBox styleClass="hbMain">
+            <HBox>
+                <Label text="Shapes"/>
+                <ComboBox fx:id="cbChooseShape" value="Point">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Point"/>
+                            <String fx:value="Line"/>
+                            <String fx:value="Arc"/>
+                            <String fx:value="Circle"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </HBox>
+            <Button id="btnAddShape" onAction="#addShape" text="Add" graphic="$imgAddShape"/>
+            <Button id="btnClearShapes" onAction="#clearShape" text="Clear" graphic="$imgDeleteShape"/>
+        </HBox>
+        <TreeView fx:id="tvShapes" showRoot="false" root="$tiShapesRoot" >
+            <TreeItem fx:id="tiShapesRoot" expanded="true">
+                <children>
+                    <TreeItem fx:id="tiPoints" expanded="true">
+                        <value>
+                            <HBox>
+                                <Label styleClass="lShape" text="Points"/>
+                            </HBox>
+                        </value>
+                    </TreeItem>
+                    <TreeItem fx:id="tiLines" expanded="true">
+                        <value>
+                            <HBox>
+                                <Label styleClass="lShape" text="Lines"/>
+                            </HBox>
+                        </value>
+                    </TreeItem>
+                    <TreeItem fx:id="tiArcs" expanded="true">
+                        <value>
+                            <HBox>
+                                <Label styleClass="lShape" text="Arcs"/>
+                            </HBox>
+                        </value>
+                    </TreeItem>
+                    <TreeItem fx:id="tiCircles" expanded="true">
+                        <value>
+                            <HBox>
+                                <Label styleClass="lShape" text="Circles"/>
+                            </HBox>
+                        </value>
+                    </TreeItem>
+                </children>
+            </TreeItem>
+        </TreeView>
+    </children>
+
+</VBox>

@@ -1,0 +1,27 @@
+/* ---- H/V Boxes ----*/
+.hbMain .text-field {
+    -fx-border-color: #7b7b7b;
+}
+
+/* ---- ComboBox ---- */
+.combo-box {
+    -fx-border-color: #7b7b7b;
+}
+
+.button:hover, .toggle-button:hover {
+    -fx-effect: innershadow(gaussian, #7b7b7b, 1, 1, 0, 0);
+}
+
+/* ---- Tree ---- */
+.tree-view {
+    -fx-background-color: #c2c0c0;
+    -fx-border-color: #5c5c5c;
+}
+
+.tree-view .arrow {
+    -fx-background-color: #5c5c5c;
+}
+
+.tree-view .tree-cell {
+    -fx-background-color: #c2c0c0;
+}
