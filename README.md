@@ -1,1 +1,1 @@
-# Blaschke-Szakdolgozat
+# Blaschke
